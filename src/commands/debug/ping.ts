@@ -4,20 +4,8 @@ import { command } from '../../utils';
 const meta = new SlashCommandBuilder()
     .setName('ping')
     .setDescription('Latency or whatever')
-    .addStringOption((option) => 
-        option
-            .setName('message')
-            .setDescription('huh')
-            .setMinLength(1)
-            .setMaxLength(2000)
-            .setRequired(false)
-    )
 
-export default command(meta, ({ interaction }) => {
-    const message = interaction.options.getString('message')
-
-    return interaction.reply({
-        ephemeral: true,
-        content: message ?? 'Pong! 🏓'
-    })
+export default command(meta, async ({ interaction }) => {
+    const mesg = await interaction.reply({ content: "Pong!", fetchReply: true });
+    await interaction.editReply({ content: `🏓 Pong!\n\nBot Latency: \`${mesg.createdTimestamp - interaction.createdTimestamp}ms\`, \nWebsocket Latency: \`${interaction.client.ws.ping}ms\`` });
 } )
