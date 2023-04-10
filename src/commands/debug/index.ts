@@ -8,5 +8,5 @@ export default category('Debug', [
     ping, 
     clear,
     cat,
-    dog
+    dog,
 ])
