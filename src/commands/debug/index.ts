@@ -6,6 +6,7 @@ import dog from './dog'
 import invite from './invite'
 import wikirandom from './wikirandom'
 import weather from './weather'
+import presence  from './presence';
 
 export default category('Debug', [
     ping, 
@@ -14,5 +15,6 @@ export default category('Debug', [
     dog,
     invite,
     wikirandom,
-    weather
+    weather,
+    presence
 ])
