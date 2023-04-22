@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import Status from '../models/statusSchema';
 
 export default event('ready', async ({ log }, client) => {
-    log(`${client.user.tag} logged in!`)
+    log(`${client.user.tag} logged in!`);
 
     // MongoDB
     await mongoose.connect(process.env.dbURI!).then(() =>
@@ -35,5 +35,13 @@ export default event('ready', async ({ log }, client) => {
                 client.user.setPresence({ activities: [{ name:botStatus, type:ActivityType.Watching}], status: "online"});
                 break;
         }
-    })
+    });
+
+    // ping command lmao
+
+    client.on('messageCreate', async message => {
+        if(message.content === 'cockandballs') {
+            message.channel.send(`cock and balls 🗿🗿🗿 \n\n client latency: \`${Date.now() - message.createdTimestamp}ms\`, \n Websocket Latency: \`${Math.round(client.ws.ping)}ms\``);
+	    }
+    });
 })
