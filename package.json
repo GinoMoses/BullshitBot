@@ -18,6 +18,7 @@
     "license": "ISC",
     "devDependencies": {
         "@types/node": "^18.15.11",
+        "@types/node-schedule": "^2.1.0",
         "nodemon": "^2.0.22",
         "ts-node": "^10.9.1",
         "typescript": "^5.0.4"
@@ -27,6 +28,7 @@
         "discord.js": "^14.9.0",
         "dotenv": "^16.0.3",
         "mongoose": "^7.0.3",
+        "node-schedule": "^2.1.1",
         "wikipedia": "^2.0.0"
     }
 }
