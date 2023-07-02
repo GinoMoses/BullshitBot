@@ -8,7 +8,7 @@ export default event("ready", async ({ log }, client) => {
 
     const rule = new schedule.RecurrenceRule();
     rule.hour = 0;
-    rule.minute = 1;
+    rule.minute = 0
     rule.dayOfWeek = 1;
     rule.tz = "CET";
     const job = schedule.scheduleJob(rule, async function () {
@@ -27,7 +27,7 @@ export default event("ready", async ({ log }, client) => {
     });
     const rule2 = new schedule.RecurrenceRule();
     rule2.hour = 0;
-    rule2.minute = 1;
+    rule2.minute = 0;
     rule2.dayOfWeek = 2;
     rule2.tz = "CET";
     const job2 = schedule.scheduleJob(rule2, async function () {
@@ -46,7 +46,7 @@ export default event("ready", async ({ log }, client) => {
     });
     const rule3 = new schedule.RecurrenceRule();
     rule3.hour = 0;
-    rule3.minute = 1;
+    rule3.minute = 0;
     rule3.dayOfWeek = 3;
     rule3.tz = "CET";
     const job3 = schedule.scheduleJob(rule3, async function () {
@@ -65,7 +65,7 @@ export default event("ready", async ({ log }, client) => {
     });
     const rule4 = new schedule.RecurrenceRule();
     rule4.hour = 0;
-    rule4.minute = 1;
+    rule4.minute = 0;
     rule4.dayOfWeek = 4;
     rule4.tz = "CET";
     const job4 = schedule.scheduleJob(rule4, async function () {
@@ -84,7 +84,7 @@ export default event("ready", async ({ log }, client) => {
     });
     const rule5 = new schedule.RecurrenceRule();
     rule5.hour = 0;
-    rule5.minute = 1;
+    rule5.minute = 0;
     rule5.dayOfWeek = 5;
     rule5.tz = "CET";
     const job5 = schedule.scheduleJob(rule5, async function () {
@@ -103,7 +103,7 @@ export default event("ready", async ({ log }, client) => {
     });
     const rule6 = new schedule.RecurrenceRule();
     rule6.hour = 0;
-    rule6.minute = 1;
+    rule6.minute = 0;
     rule6.dayOfWeek = 6;
     rule6.tz = "CET";
     const job6 = schedule.scheduleJob(rule6, async function () {
@@ -122,7 +122,7 @@ export default event("ready", async ({ log }, client) => {
     });
     const rule7 = new schedule.RecurrenceRule();
     rule7.hour = 0;
-    rule7.minute = 1;
+    rule7.minute = 0;
     rule7.dayOfWeek = 0;
     rule7.tz = "CET";
     const job7 = schedule.scheduleJob(rule7, async function () {
