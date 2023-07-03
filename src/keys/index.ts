@@ -3,7 +3,8 @@ import { Keys } from '../types';
 const keys: Keys = {
     clientToken: process.env.clientToken ?? 'nil',
     testGuild: process.env.testGuild ?? 'nil',
-    weatherKey: process.env.weatherKey ?? 'nil'
+    weatherKey: process.env.weatherKey ?? 'nil',
+    dbURI: process.env.dbURI ?? 'nil',
 };
 
 if (Object.values(keys).includes('nil'))

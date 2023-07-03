@@ -1,5 +1,6 @@
 export interface Keys {
     clientToken: string,
     testGuild: string,
-    weatherKey: string
+    weatherKey: string,
+    dbURI: string,
 }
