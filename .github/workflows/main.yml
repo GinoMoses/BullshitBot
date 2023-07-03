@@ -24,7 +24,7 @@ jobs:
         uses: wlixcc/SFTP-Deploy-Action@v1.2.1
         with:
           username: root
-          server: 134.122.86.54
+          server: 157.230.114.115
           port: 22 # default is 22
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY_BS }}
  
