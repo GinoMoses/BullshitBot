@@ -38,4 +38,4 @@ jobs:
           args: '-o ConnectTimeout=5'
       - run: npm i
       - run: npm run build
-      - run: pm2 start 0
+      - run: npm run start
