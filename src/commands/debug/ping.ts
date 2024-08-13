@@ -7,5 +7,5 @@ const meta = new SlashCommandBuilder()
 
 export default command(meta, async ({ interaction }) => {
     const mesg = await interaction.reply({ content: "Pong!", fetchReply: true });
-    await interaction.editReply({ content: `🏓 Pong!\n\nBot Latency: \`${mesg.createdTimestamp - interaction.createdTimestamp}ms\`, \nWebsocket Latency: \`${interaction.client.ws.ping}ms\`` });
+    await interaction.editReply({ content: `🏓 Pong!\n\nClient Latency: \`${mesg.createdTimestamp - interaction.createdTimestamp}ms\`, \nWebsocket Latency: \`${interaction.client.ws.ping}ms\`` });
 } )
